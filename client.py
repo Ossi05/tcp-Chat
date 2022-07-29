@@ -65,6 +65,10 @@ def write():
                 elif message[len(nickname)+2:].startswith('/ban'):
                     client.send(f'BAN {message[len(nickname)+2+5:]}'.encode('ascii'))
 
+                
+
+
+
             else:
                 print("Commands can only be executed by the admin!")
         else:

@@ -47,6 +47,8 @@ def handle(client):
 
                 else:
                     client.send('Command was refused'.encode('ascii'))
+
+            
                 
 
 
@@ -93,7 +95,7 @@ def receive():
             client.send('PASS'.encode('ascii'))
             password = client.recv(1024).decode('ascii')
 
-            if password != 'adminpass':
+            if password != 'salasana':
                 client.send('REFUSE'.encode('ascii'))
                 client.close()
                 continue
